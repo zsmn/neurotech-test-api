@@ -2,13 +2,25 @@ version: '3.1'
 services:
   db:
     image: mysql
-    container_name: mysql
+    container_name: neurotech-test-api-mysql-container
     environment:
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
       MYSQL_ROOT_PASSWORD: root
     ports:
     - "3306:3306"
     volumes:
     - currency_data:/var/lib/mysql
+  neurotech-test-api:
+    image: zsmn/neurotech-test-api
+    container_name: neurotech-test-api-container
+    environment:
+      - SLEEP_LENGTH=5
+    restart: on-failure
+    volumes:
+      - /data/neurotech-test-api-container
+    ports:
+      - "8080:8080"
 
 volumes:
   currency_data:
