@@ -1,6 +1,6 @@
 version: '3.1'
 services:
-  db:
+  neurotech-test-api-database:
     image: mysql
     container_name: neurotech-test-api-mysql-container
     environment:

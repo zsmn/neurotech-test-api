@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Documents</title>
+</head>
+<body>
+    <div class="container">
+        <div>
+            Today's currency <br>
+            <label for="fname">BRL: </label>
+            <input name="inputBRL" type="number" min="1" step="any" onchange="CurrencyExchange()"/><br>
+            <label for="fname">USD: </label>
+            <input id="usd" type="number" min="1" step="any" disabled/><br><br>
+        </div>
+        <button type="button" onClick="redrawChart('1W')">1W</button>
+        <button type="button" onclick="redrawChart('1M')">1M</button>
+        <button type="button" onclick="redrawChart('1Y')">1Y</button>
+        <button type="button" onclick="redrawChart('5Y')">5Y</button>
+        <canvas id='chart'></canvas>
+    </div>
+
+    <script src="./node_modules/chart.js/dist/chart.js"></script>
+    <script src="./node_modules/axios/dist/axios.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
