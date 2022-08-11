@@ -17,6 +17,7 @@ import java.util.Map;
 @RequestMapping("currency")
 @Log4j2
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8081")
 public class CurrencyController {
     public final CurrencyService currencyService;
 
