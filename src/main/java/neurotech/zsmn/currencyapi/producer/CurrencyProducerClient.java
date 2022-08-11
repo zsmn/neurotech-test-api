@@ -9,6 +9,7 @@ import neurotech.zsmn.currencyapi.service.CurrencyService;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.Scope;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
@@ -23,6 +24,7 @@ import java.util.Map;
 
 @Log4j2
 @Component
+@Profile("!test")
 public class CurrencyProducerClient implements DisposableBean, Runnable {
     @Autowired
     private CurrencyService currencyService;

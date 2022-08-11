@@ -5,6 +5,7 @@ import neurotech.zsmn.currencyapi.domain.Currency;
 import neurotech.zsmn.currencyapi.repository.CurrencyRepository;
 import neurotech.zsmn.currencyapi.util.CurrencyCreator;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
